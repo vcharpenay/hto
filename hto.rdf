@@ -1,0 +1,1194 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY hto "http://project-haystack.org/hto#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:hto="http://project-haystack.org/hto#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology rdf:about="http://project-haystack.org/hto#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://project-haystack.org/hto#associatedTo -->
+
+    <AnnotationProperty rdf:about="&hto;associatedTo">
+        <rdfs:comment>gives the OWL class defined in the present ontology that should be associated to the individual defined as subject.</rdfs:comment>
+        <rdfs:domain rdf:resource="&hto;HTag"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://project-haystack.org/hto#belongsTo -->
+
+    <ObjectProperty rdf:about="&hto;belongsTo">
+        <rdfs:range rdf:resource="&hto;Equipment"/>
+        <rdfs:domain rdf:resource="&hto;Point"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://project-haystack.org/hto#hasRef -->
+
+    <ObjectProperty rdf:about="&hto;hasRef">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://project-haystack.org/hto#hasSection -->
+
+    <ObjectProperty rdf:about="&hto;hasSection">
+        <rdfs:domain rdf:resource="&hto;Equipment"/>
+        <rdfs:range rdf:resource="&hto;Section"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://project-haystack.org/hto#hasTag -->
+
+    <ObjectProperty rdf:about="&hto;hasTag"/>
+    
+
+
+    <!-- http://project-haystack.org/hto#isRefedBy -->
+
+    <ObjectProperty rdf:about="&hto;isRefedBy">
+        <inverseOf rdf:resource="&hto;hasRef"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://project-haystack.org/hto#locatedOn -->
+
+    <ObjectProperty rdf:about="&hto;locatedOn">
+        <rdfs:domain rdf:resource="&hto;Point"/>
+        <rdfs:range rdf:resource="&hto;Section"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://project-haystack.org/hto#measuredOn -->
+
+    <ObjectProperty rdf:about="&hto;measuredOn">
+        <rdfs:domain rdf:resource="&hto;Measurement"/>
+        <rdfs:range rdf:resource="&hto;PhysicalBody"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://project-haystack.org/hto#quantifies -->
+
+    <ObjectProperty rdf:about="&hto;quantifies">
+        <rdfs:range rdf:resource="&hto;Measurement"/>
+        <rdfs:domain rdf:resource="&hto;Point"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://project-haystack.org/hto#dis -->
+
+    <DatatypeProperty rdf:about="&hto;dis">
+        <rdfs:domain rdf:resource="&hto;HEntity"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://project-haystack.org/hto#AHU -->
+
+    <Class rdf:about="&hto;AHU">
+        <rdfs:subClassOf rdf:resource="&hto;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Air -->
+
+    <Class rdf:about="&hto;Air">
+        <rdfs:subClassOf rdf:resource="&hto;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Boiler -->
+
+    <Class rdf:about="&hto;Boiler">
+        <rdfs:subClassOf rdf:resource="&hto;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#CO2 -->
+
+    <Class rdf:about="&hto;CO2">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#ChilledSystem -->
+
+    <Class rdf:about="&hto;ChilledSystem">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Chiller -->
+
+    <Class rdf:about="&hto;Chiller">
+        <rdfs:subClassOf rdf:resource="&hto;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Command -->
+
+    <Class rdf:about="&hto;Command">
+        <rdfs:subClassOf rdf:resource="&hto;Point"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#CondenserSystem -->
+
+    <Class rdf:about="&hto;CondenserSystem">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#CoolingCoil -->
+
+    <Class rdf:about="&hto;CoolingCoil">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Discharge -->
+
+    <Class rdf:about="&hto;Discharge">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Efficiency -->
+
+    <Class rdf:about="&hto;Efficiency">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Entering -->
+
+    <Class rdf:about="&hto;Entering">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Equipment -->
+
+    <Class rdf:about="&hto;Equipment">
+        <rdfs:subClassOf rdf:resource="&hto;HEntity"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Exhaust -->
+
+    <Class rdf:about="&hto;Exhaust">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Fan -->
+
+    <Class rdf:about="&hto;Fan">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Flow -->
+
+    <Class rdf:about="&hto;Flow">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Frequency -->
+
+    <Class rdf:about="&hto;Frequency">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Gas -->
+
+    <Class rdf:about="&hto;Gas">
+        <rdfs:subClassOf rdf:resource="&hto;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#HEntity -->
+
+    <Class rdf:about="&hto;HEntity"/>
+    
+
+
+    <!-- http://project-haystack.org/hto#HTag -->
+
+    <Class rdf:about="&hto;HTag"/>
+    
+
+
+    <!-- http://project-haystack.org/hto#HVAC -->
+
+    <Class rdf:about="&hto;HVAC">
+        <rdfs:subClassOf rdf:resource="&hto;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#HeatingCoil -->
+
+    <Class rdf:about="&hto;HeatingCoil">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Historized -->
+
+    <Class rdf:about="&hto;Historized">
+        <rdfs:subClassOf rdf:resource="&hto;PointProperty"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Humidity -->
+
+    <Class rdf:about="&hto;Humidity">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#IsolationValve -->
+
+    <Class rdf:about="&hto;IsolationValve">
+        <rdfs:subClassOf rdf:resource="&hto;Valve"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Leaving -->
+
+    <Class rdf:about="&hto;Leaving">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#LightLevel -->
+
+    <Class rdf:about="&hto;LightLevel">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#LightsGroup -->
+
+    <Class rdf:about="&hto;LightsGroup">
+        <rdfs:subClassOf rdf:resource="&hto;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Measurement -->
+
+    <Class rdf:about="&hto;Measurement"/>
+    
+
+
+    <!-- http://project-haystack.org/hto#Meter -->
+
+    <Class rdf:about="&hto;Meter">
+        <rdfs:subClassOf rdf:resource="&hto;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Mixed -->
+
+    <Class rdf:about="&hto;Mixed">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#OnOff -->
+
+    <Class rdf:about="&hto;OnOff">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Percentage -->
+
+    <Class rdf:about="&hto;Percentage">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#PerimeterHeat -->
+
+    <Class rdf:about="&hto;PerimeterHeat">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#PhysicalBody -->
+
+    <Class rdf:about="&hto;PhysicalBody"/>
+    
+
+
+    <!-- http://project-haystack.org/hto#Point -->
+
+    <Class rdf:about="&hto;Point">
+        <rdfs:subClassOf rdf:resource="&hto;HEntity"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#PointProperty -->
+
+    <Class rdf:about="&hto;PointProperty"/>
+    
+
+
+    <!-- http://project-haystack.org/hto#Power -->
+
+    <Class rdf:about="&hto;Power">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Pressure -->
+
+    <Class rdf:about="&hto;Pressure">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Pump -->
+
+    <Class rdf:about="&hto;Pump">
+        <rdfs:subClassOf rdf:resource="&hto;VFD"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#RTU -->
+
+    <Class rdf:about="&hto;RTU">
+        <rdfs:subClassOf rdf:resource="&hto;AHU"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#RealTime -->
+
+    <Class rdf:about="&hto;RealTime">
+        <rdfs:subClassOf rdf:resource="&hto;PointProperty"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#RefrigerantSubstance -->
+
+    <Class rdf:about="&hto;RefrigerantSubstance">
+        <rdfs:subClassOf rdf:resource="&hto;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Return -->
+
+    <Class rdf:about="&hto;Return">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Section -->
+
+    <Class rdf:about="&hto;Section"/>
+    
+
+
+    <!-- http://project-haystack.org/hto#Sensor -->
+
+    <Class rdf:about="&hto;Sensor">
+        <rdfs:subClassOf rdf:resource="&hto;Point"/>
+        <hto:associatedTo rdf:resource="&hto;sensor"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#SetPoint -->
+
+    <Class rdf:about="&hto;SetPoint">
+        <rdfs:subClassOf rdf:resource="&hto;Point"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Site -->
+
+    <Class rdf:about="&hto;Site">
+        <rdfs:subClassOf rdf:resource="&hto;HEntity"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Speed -->
+
+    <Class rdf:about="&hto;Speed">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Steam -->
+
+    <Class rdf:about="&hto;Steam">
+        <rdfs:subClassOf rdf:resource="&hto;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Temperature -->
+
+    <Class rdf:about="&hto;Temperature">
+        <rdfs:subClassOf rdf:resource="&hto;Measurement"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#VAV -->
+
+    <Class rdf:about="&hto;VAV">
+        <rdfs:subClassOf rdf:resource="&hto;HVAC"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#VFD -->
+
+    <Class rdf:about="&hto;VFD">
+        <rdfs:subClassOf rdf:resource="&hto;Equipment"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#VFDFan -->
+
+    <Class rdf:about="&hto;VFDFan">
+        <rdfs:subClassOf rdf:resource="&hto;VFD"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Valve -->
+
+    <Class rdf:about="&hto;Valve">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Water -->
+
+    <Class rdf:about="&hto;Water">
+        <rdfs:subClassOf rdf:resource="&hto;PhysicalBody"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Writable -->
+
+    <Class rdf:about="&hto;Writable">
+        <rdfs:subClassOf rdf:resource="&hto;PointProperty"/>
+    </Class>
+    
+
+
+    <!-- http://project-haystack.org/hto#Zone -->
+
+    <Class rdf:about="&hto;Zone">
+        <rdfs:subClassOf rdf:resource="&hto;Section"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://project-haystack.org/hto#ahu -->
+
+    <NamedIndividual rdf:about="&hto;ahu">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;AHU"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#air -->
+
+    <NamedIndividual rdf:about="&hto;air">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Air"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#boiler -->
+
+    <NamedIndividual rdf:about="&hto;boiler">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: does not fully implement specification (no boilerPlant). However, is still a TODO in project Haystack.</rdfs:comment>
+        <hto:associatedTo rdf:resource="&hto;Boiler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#bypass -->
+
+    <NamedIndividual rdf:about="&hto;bypass">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#chilled -->
+
+    <NamedIndividual rdf:about="&hto;chilled">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;ChilledSystem"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#chiller -->
+
+    <NamedIndividual rdf:about="&hto;chiller">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: does not fully implement specification (no chillerPlant, no CoolingTower).</rdfs:comment>
+        <hto:associatedTo rdf:resource="&hto;Chiller"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#cmd -->
+
+    <NamedIndividual rdf:about="&hto;cmd">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Command"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#co2 -->
+
+    <NamedIndividual rdf:about="&hto;co2">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;CO2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#condenser -->
+
+    <NamedIndividual rdf:about="&hto;condenser">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;CondenserSystem"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#cool -->
+
+    <NamedIndividual rdf:about="&hto;cool">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;CoolingCoil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#cooling -->
+
+    <NamedIndividual rdf:about="&hto;cooling">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#damper -->
+
+    <NamedIndividual rdf:about="&hto;damper">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: indicates the measurement of how open the damper of a AHU is (0-100%)</rdfs:comment>
+        <hto:associatedTo rdf:resource="&hto;Percentage"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#delta -->
+
+    <NamedIndividual rdf:about="&hto;delta">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#discharge -->
+
+    <NamedIndividual rdf:about="&hto;discharge">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Discharge"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#effective -->
+
+    <NamedIndividual rdf:about="&hto;effective">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#efficiency -->
+
+    <NamedIndividual rdf:about="&hto;efficiency">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Efficiency"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#elec -->
+
+    <NamedIndividual rdf:about="&hto;elec">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: according to the documentation, is assocated to either point or equip</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#enable -->
+
+    <NamedIndividual rdf:about="&hto;enable">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#energy -->
+
+    <NamedIndividual rdf:about="&hto;energy">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#entering -->
+
+    <NamedIndividual rdf:about="&hto;entering">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Entering"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#evaporator -->
+
+    <NamedIndividual rdf:about="&hto;evaporator">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#exhaust -->
+
+    <NamedIndividual rdf:about="&hto;exhaust">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Exhaust"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#faceBypass -->
+
+    <NamedIndividual rdf:about="&hto;faceBypass">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#fan -->
+
+    <NamedIndividual rdf:about="&hto;fan">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: according to the documentation, is assocated to either point or equip. Should use reasoning to choose the right one for a given HEntity</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#filter -->
+
+    <NamedIndividual rdf:about="&hto;filter">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Pressure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#flow -->
+
+    <NamedIndividual rdf:about="&hto;flow">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Flow"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#freezeStat -->
+
+    <NamedIndividual rdf:about="&hto;freezeStat">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#freq -->
+
+    <NamedIndividual rdf:about="&hto;freq">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Frequency"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#gas -->
+
+    <NamedIndividual rdf:about="&hto;gas">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Gas"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#heat -->
+
+    <NamedIndividual rdf:about="&hto;heat">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;HeatingCoil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#heatWheel -->
+
+    <NamedIndividual rdf:about="&hto;heatWheel">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#heating -->
+
+    <NamedIndividual rdf:about="&hto;heating">
+        <rdf:type rdf:resource="&hto;HTag"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#humidifier -->
+
+    <NamedIndividual rdf:about="&hto;humidifier">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#humidity -->
+
+    <NamedIndividual rdf:about="&hto;humidity">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Humidity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#hvac -->
+
+    <NamedIndividual rdf:about="&hto;hvac">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;HVAC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#isolation -->
+
+    <NamedIndividual rdf:about="&hto;isolation">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;IsolationValve"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#leaving -->
+
+    <NamedIndividual rdf:about="&hto;leaving">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Leaving"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#lightLevel -->
+
+    <NamedIndividual rdf:about="&hto;lightLevel">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;LightLevel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#lights -->
+
+    <NamedIndividual rdf:about="&hto;lights">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type and redundant with the tag lightLevel.</rdfs:comment>
+        <hto:associatedTo rdf:resource="&hto;LightLevel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#lightsGroup -->
+
+    <NamedIndividual rdf:about="&hto;lightsGroup">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;LightsGroup"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#load -->
+
+    <NamedIndividual rdf:about="&hto;load">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Percentage"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#meter -->
+
+    <NamedIndividual rdf:about="&hto;meter">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Meter"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#mixed -->
+
+    <NamedIndividual rdf:about="&hto;mixed">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Mixed"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#occupancyIndicator -->
+
+    <NamedIndividual rdf:about="&hto;occupancyIndicator">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type. Similarly, lights and lightLevel tags both refer to the class LightLevel.</rdfs:comment>
+        <rdfs:seeAlso>http://project-haystack.org/tag/lights</rdfs:seeAlso>
+        <hto:associatedTo rdf:resource="&hto;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#perimeterHeat -->
+
+    <NamedIndividual rdf:about="&hto;perimeterHeat">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;PerimeterHeat"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#point -->
+
+    <NamedIndividual rdf:about="&hto;point">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Point"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#power -->
+
+    <NamedIndividual rdf:about="&hto;power">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Power"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#pressure -->
+
+    <NamedIndividual rdf:about="&hto;pressure">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Pressure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#refrig -->
+
+    <NamedIndividual rdf:about="&hto;refrig">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;RefrigerantSubstance"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#return -->
+
+    <NamedIndividual rdf:about="&hto;return">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Return"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#rooftop -->
+
+    <NamedIndividual rdf:about="&hto;rooftop">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;RTU"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#run -->
+
+    <NamedIndividual rdf:about="&hto;run">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type.</rdfs:comment>
+        <hto:associatedTo rdf:resource="&hto;OnOff"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#sensor -->
+
+    <NamedIndividual rdf:about="&hto;sensor">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Sensor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#sp -->
+
+    <NamedIndividual rdf:about="&hto;sp">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;SetPoint"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#speed -->
+
+    <NamedIndividual rdf:about="&hto;speed">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Speed"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#steam -->
+
+    <NamedIndividual rdf:about="&hto;steam">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Steam"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#temp -->
+
+    <NamedIndividual rdf:about="&hto;temp">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Temperature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#valve -->
+
+    <NamedIndividual rdf:about="&hto;valve">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Valve"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#vav -->
+
+    <NamedIndividual rdf:about="&hto;vav">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;VAV"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#vfd -->
+
+    <NamedIndividual rdf:about="&hto;vfd">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;VFD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#water -->
+
+    <NamedIndividual rdf:about="&hto;water">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Water"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://project-haystack.org/hto#zone -->
+
+    <NamedIndividual rdf:about="&hto;zone">
+        <rdf:type rdf:resource="&hto;HTag"/>
+        <hto:associatedTo rdf:resource="&hto;Zone"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&hto;Equipment"/>
+            <rdf:Description rdf:about="&hto;Point"/>
+            <rdf:Description rdf:about="&hto;Site"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
