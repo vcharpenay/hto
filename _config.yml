@@ -1,0 +1,13 @@
+# Site settings
+title: Haystack Tagging Ontology
+email: victor.charpenay@siemens.com
+description: > 
+  The Haystack Tagging Ontology is an OWL ontology for
+  Project Haystack, a domain vocabulary for Building
+  Automation Systems.
+baseurl: "/hto"
+url: "http://vcharpenay.github.io"
+github_username:  vcharpenay
+
+# Build settings
+markdown: kramdown
