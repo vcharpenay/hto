@@ -15,6 +15,10 @@
                                    
                                    rdfs:seeAlso "http://project-haystack.org"^^xsd:anyURI ;
                                    
+                                   rdfs:comment "The Haystack Tagging Ontology is an OWL ontology for Project Haystack, a domain vocabulary for Building Automation Systems." ;
+                                   
+                                   <http://creativecommons.org/ns#license> "Academic Free License (\"AFL\") 3.0" ;
+                                   
                                    :versionInfo "0.1.0" ;
                                    
                                    dc:title "Haystack Tagging Ontology" ;
