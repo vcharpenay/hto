@@ -162,6 +162,8 @@ hto:dis rdf:type :DatatypeProperty ;
 
 hto:AHU rdf:type :Class ;
         
+        rdfs:label "AHU" ;
+        
         rdfs:subClassOf hto:HVAC .
 
 
@@ -169,6 +171,8 @@ hto:AHU rdf:type :Class ;
 ###  http://project-haystack.org/hto#Air
 
 hto:Air rdf:type :Class ;
+        
+        rdfs:label "Air" ;
         
         rdfs:subClassOf hto:PhysicalBody .
 
@@ -178,6 +182,8 @@ hto:Air rdf:type :Class ;
 
 hto:Boiler rdf:type :Class ;
            
+           rdfs:label "Boiler" ;
+           
            rdfs:subClassOf hto:HVAC .
 
 
@@ -185,6 +191,8 @@ hto:Boiler rdf:type :Class ;
 ###  http://project-haystack.org/hto#CO2
 
 hto:CO2 rdf:type :Class ;
+        
+        rdfs:label "CO2" ;
         
         rdfs:subClassOf hto:Measurement .
 
@@ -194,6 +202,8 @@ hto:CO2 rdf:type :Class ;
 
 hto:ChilledSystem rdf:type :Class ;
                   
+                  rdfs:label "Chilled System" ;
+                  
                   rdfs:subClassOf hto:Section .
 
 
@@ -201,6 +211,8 @@ hto:ChilledSystem rdf:type :Class ;
 ###  http://project-haystack.org/hto#Chiller
 
 hto:Chiller rdf:type :Class ;
+            
+            rdfs:label "Chiller" ;
             
             rdfs:subClassOf hto:HVAC .
 
@@ -210,6 +222,8 @@ hto:Chiller rdf:type :Class ;
 
 hto:Command rdf:type :Class ;
             
+            rdfs:label "Command" ;
+            
             rdfs:subClassOf hto:Point .
 
 
@@ -217,6 +231,8 @@ hto:Command rdf:type :Class ;
 ###  http://project-haystack.org/hto#CondenserSystem
 
 hto:CondenserSystem rdf:type :Class ;
+                    
+                    rdfs:label "Condenser System" ;
                     
                     rdfs:subClassOf hto:Section .
 
@@ -226,6 +242,8 @@ hto:CondenserSystem rdf:type :Class ;
 
 hto:CoolingCoil rdf:type :Class ;
                 
+                rdfs:label "Cooling Coil" ;
+                
                 rdfs:subClassOf hto:Section .
 
 
@@ -233,6 +251,8 @@ hto:CoolingCoil rdf:type :Class ;
 ###  http://project-haystack.org/hto#Discharge
 
 hto:Discharge rdf:type :Class ;
+              
+              rdfs:label "Discharge" ;
               
               rdfs:subClassOf hto:Section .
 
@@ -242,6 +262,8 @@ hto:Discharge rdf:type :Class ;
 
 hto:Efficiency rdf:type :Class ;
                
+               rdfs:label "Efficiency" ;
+               
                rdfs:subClassOf hto:Measurement .
 
 
@@ -250,6 +272,8 @@ hto:Efficiency rdf:type :Class ;
 
 hto:Entering rdf:type :Class ;
              
+             rdfs:label "Entering" ;
+             
              rdfs:subClassOf hto:Section .
 
 
@@ -257,6 +281,8 @@ hto:Entering rdf:type :Class ;
 ###  http://project-haystack.org/hto#Equipment
 
 hto:Equipment rdf:type :Class ;
+              
+              rdfs:label "Equipment" ;
               
               rdfs:subClassOf hto:HEntity ,
                               <http://purl.oclc.org/NET/ssnx/ssn#Platform> .
@@ -267,6 +293,8 @@ hto:Equipment rdf:type :Class ;
 
 hto:Exhaust rdf:type :Class ;
             
+            rdfs:label "Exhaust" ;
+            
             rdfs:subClassOf hto:Section .
 
 
@@ -274,6 +302,8 @@ hto:Exhaust rdf:type :Class ;
 ###  http://project-haystack.org/hto#Fan
 
 hto:Fan rdf:type :Class ;
+        
+        rdfs:label "Fan" ;
         
         rdfs:subClassOf hto:Section .
 
@@ -283,6 +313,8 @@ hto:Fan rdf:type :Class ;
 
 hto:Flow rdf:type :Class ;
          
+         rdfs:label "Flow" ;
+         
          rdfs:subClassOf hto:Measurement .
 
 
@@ -290,6 +322,8 @@ hto:Flow rdf:type :Class ;
 ###  http://project-haystack.org/hto#Frequency
 
 hto:Frequency rdf:type :Class ;
+              
+              rdfs:label "Frequency" ;
               
               rdfs:subClassOf hto:Measurement .
 
@@ -299,25 +333,33 @@ hto:Frequency rdf:type :Class ;
 
 hto:Gas rdf:type :Class ;
         
+        rdfs:label "Gas" ;
+        
         rdfs:subClassOf hto:PhysicalBody .
 
 
 
 ###  http://project-haystack.org/hto#HEntity
 
-hto:HEntity rdf:type :Class .
+hto:HEntity rdf:type :Class ;
+            
+            rdfs:label "HEntity" .
 
 
 
 ###  http://project-haystack.org/hto#HTag
 
-hto:HTag rdf:type :Class .
+hto:HTag rdf:type :Class ;
+         
+         rdfs:label "HTag" .
 
 
 
 ###  http://project-haystack.org/hto#HVAC
 
 hto:HVAC rdf:type :Class ;
+         
+         rdfs:label "HVAC" ;
          
          rdfs:subClassOf hto:Equipment .
 
@@ -327,6 +369,8 @@ hto:HVAC rdf:type :Class ;
 
 hto:HeatingCoil rdf:type :Class ;
                 
+                rdfs:label "Heating Coil" ;
+                
                 rdfs:subClassOf hto:Section .
 
 
@@ -334,6 +378,8 @@ hto:HeatingCoil rdf:type :Class ;
 ###  http://project-haystack.org/hto#Historized
 
 hto:Historized rdf:type :Class ;
+               
+               rdfs:label "Historized" ;
                
                rdfs:subClassOf hto:PointProperty .
 
@@ -343,6 +389,8 @@ hto:Historized rdf:type :Class ;
 
 hto:Humidity rdf:type :Class ;
              
+             rdfs:label "Humidity" ;
+             
              rdfs:subClassOf hto:Measurement .
 
 
@@ -350,6 +398,8 @@ hto:Humidity rdf:type :Class ;
 ###  http://project-haystack.org/hto#IsolationValve
 
 hto:IsolationValve rdf:type :Class ;
+                   
+                   rdfs:label "Isolation Valve" ;
                    
                    rdfs:subClassOf hto:Valve .
 
@@ -359,6 +409,8 @@ hto:IsolationValve rdf:type :Class ;
 
 hto:Leaving rdf:type :Class ;
             
+            rdfs:label "Leaving" ;
+            
             rdfs:subClassOf hto:Section .
 
 
@@ -366,6 +418,8 @@ hto:Leaving rdf:type :Class ;
 ###  http://project-haystack.org/hto#LightLevel
 
 hto:LightLevel rdf:type :Class ;
+               
+               rdfs:label "Light Level" ;
                
                rdfs:subClassOf hto:Measurement .
 
@@ -375,19 +429,25 @@ hto:LightLevel rdf:type :Class ;
 
 hto:LightsGroup rdf:type :Class ;
                 
+                rdfs:label "Lights Group" ;
+                
                 rdfs:subClassOf hto:Equipment .
 
 
 
 ###  http://project-haystack.org/hto#Measurement
 
-hto:Measurement rdf:type :Class .
+hto:Measurement rdf:type :Class ;
+                
+                rdfs:label "Measurement" .
 
 
 
 ###  http://project-haystack.org/hto#Meter
 
 hto:Meter rdf:type :Class ;
+          
+          rdfs:label "Meter" ;
           
           rdfs:subClassOf hto:Equipment .
 
@@ -397,6 +457,8 @@ hto:Meter rdf:type :Class ;
 
 hto:Mixed rdf:type :Class ;
           
+          rdfs:label "Mixed" ;
+          
           rdfs:subClassOf hto:Section .
 
 
@@ -404,6 +466,8 @@ hto:Mixed rdf:type :Class ;
 ###  http://project-haystack.org/hto#OnOff
 
 hto:OnOff rdf:type :Class ;
+          
+          rdfs:label "On/Off" ;
           
           rdfs:subClassOf hto:Measurement .
 
@@ -413,6 +477,8 @@ hto:OnOff rdf:type :Class ;
 
 hto:Percentage rdf:type :Class ;
                
+               rdfs:label "Percentage" ;
+               
                rdfs:subClassOf hto:Measurement .
 
 
@@ -421,13 +487,17 @@ hto:Percentage rdf:type :Class ;
 
 hto:PerimeterHeat rdf:type :Class ;
                   
+                  rdfs:label "Perimeter Heat" ;
+                  
                   rdfs:subClassOf hto:Section .
 
 
 
 ###  http://project-haystack.org/hto#PhysicalBody
 
-hto:PhysicalBody rdf:type :Class .
+hto:PhysicalBody rdf:type :Class ;
+                 
+                 rdfs:label "Physical Body" .
 
 
 
@@ -435,19 +505,25 @@ hto:PhysicalBody rdf:type :Class .
 
 hto:Point rdf:type :Class ;
           
+          rdfs:label "Point" ;
+          
           rdfs:subClassOf hto:HEntity .
 
 
 
 ###  http://project-haystack.org/hto#PointProperty
 
-hto:PointProperty rdf:type :Class .
+hto:PointProperty rdf:type :Class ;
+                  
+                  rdfs:label "Point Property" .
 
 
 
 ###  http://project-haystack.org/hto#Power
 
 hto:Power rdf:type :Class ;
+          
+          rdfs:label "Power" ;
           
           rdfs:subClassOf hto:Measurement .
 
@@ -457,6 +533,8 @@ hto:Power rdf:type :Class ;
 
 hto:Pressure rdf:type :Class ;
              
+             rdfs:label "Pressure" ;
+             
              rdfs:subClassOf hto:Measurement .
 
 
@@ -464,6 +542,8 @@ hto:Pressure rdf:type :Class ;
 ###  http://project-haystack.org/hto#Pump
 
 hto:Pump rdf:type :Class ;
+         
+         rdfs:label "Pump" ;
          
          rdfs:subClassOf hto:VFD .
 
@@ -473,6 +553,8 @@ hto:Pump rdf:type :Class ;
 
 hto:RTU rdf:type :Class ;
         
+        rdfs:label "RTU" ;
+        
         rdfs:subClassOf hto:AHU .
 
 
@@ -480,6 +562,8 @@ hto:RTU rdf:type :Class ;
 ###  http://project-haystack.org/hto#RealTime
 
 hto:RealTime rdf:type :Class ;
+             
+             rdfs:label "Real time" ;
              
              rdfs:subClassOf hto:PointProperty .
 
@@ -489,6 +573,8 @@ hto:RealTime rdf:type :Class ;
 
 hto:RefrigerantSubstance rdf:type :Class ;
                          
+                         rdfs:label "Refrigirant Substance" ;
+                         
                          rdfs:subClassOf hto:PhysicalBody .
 
 
@@ -496,6 +582,8 @@ hto:RefrigerantSubstance rdf:type :Class ;
 ###  http://project-haystack.org/hto#Return
 
 hto:Return rdf:type :Class ;
+           
+           rdfs:label "Return" ;
            
            rdfs:subClassOf hto:Section .
 
@@ -505,6 +593,8 @@ hto:Return rdf:type :Class ;
 
 hto:Section rdf:type :Class ;
             
+            rdfs:label "Section" ;
+            
             rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> .
 
 
@@ -512,6 +602,8 @@ hto:Section rdf:type :Class ;
 ###  http://project-haystack.org/hto#Sensor
 
 hto:Sensor rdf:type :Class ;
+           
+           rdfs:label "Sensor" ;
            
            rdfs:subClassOf hto:Point ,
                            <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> ;
@@ -524,6 +616,8 @@ hto:Sensor rdf:type :Class ;
 
 hto:SetPoint rdf:type :Class ;
              
+             rdfs:label "Set Point" ;
+             
              rdfs:subClassOf hto:Point .
 
 
@@ -531,6 +625,8 @@ hto:SetPoint rdf:type :Class ;
 ###  http://project-haystack.org/hto#Site
 
 hto:Site rdf:type :Class ;
+         
+         rdfs:label "Site" ;
          
          rdfs:subClassOf hto:HEntity .
 
@@ -540,6 +636,8 @@ hto:Site rdf:type :Class ;
 
 hto:Speed rdf:type :Class ;
           
+          rdfs:label "Speed" ;
+          
           rdfs:subClassOf hto:Measurement .
 
 
@@ -547,6 +645,8 @@ hto:Speed rdf:type :Class ;
 ###  http://project-haystack.org/hto#Steam
 
 hto:Steam rdf:type :Class ;
+          
+          rdfs:label "Steam" ;
           
           rdfs:subClassOf hto:PhysicalBody .
 
@@ -556,6 +656,8 @@ hto:Steam rdf:type :Class ;
 
 hto:Temperature rdf:type :Class ;
                 
+                rdfs:label "Temperature" ;
+                
                 rdfs:subClassOf hto:Measurement .
 
 
@@ -563,6 +665,8 @@ hto:Temperature rdf:type :Class ;
 ###  http://project-haystack.org/hto#VAV
 
 hto:VAV rdf:type :Class ;
+        
+        rdfs:label "VAV" ;
         
         rdfs:subClassOf hto:HVAC .
 
@@ -572,6 +676,8 @@ hto:VAV rdf:type :Class ;
 
 hto:VFD rdf:type :Class ;
         
+        rdfs:label "VFD" ;
+        
         rdfs:subClassOf hto:Equipment .
 
 
@@ -579,6 +685,8 @@ hto:VFD rdf:type :Class ;
 ###  http://project-haystack.org/hto#VFDFan
 
 hto:VFDFan rdf:type :Class ;
+           
+           rdfs:label "VFD Fan" ;
            
            rdfs:subClassOf hto:VFD .
 
@@ -588,6 +696,8 @@ hto:VFDFan rdf:type :Class ;
 
 hto:Valve rdf:type :Class ;
           
+          rdfs:label "Valve" ;
+          
           rdfs:subClassOf hto:Section .
 
 
@@ -595,6 +705,8 @@ hto:Valve rdf:type :Class ;
 ###  http://project-haystack.org/hto#Water
 
 hto:Water rdf:type :Class ;
+          
+          rdfs:label "Water" ;
           
           rdfs:subClassOf hto:PhysicalBody .
 
@@ -604,6 +716,8 @@ hto:Water rdf:type :Class ;
 
 hto:Writable rdf:type :Class ;
              
+             rdfs:label "Writable" ;
+             
              rdfs:subClassOf hto:PointProperty .
 
 
@@ -611,6 +725,8 @@ hto:Writable rdf:type :Class ;
 ###  http://project-haystack.org/hto#Zone
 
 hto:Zone rdf:type :Class ;
+         
+         rdfs:label "Zone" ;
          
          rdfs:subClassOf hto:Section .
 
