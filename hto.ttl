@@ -1,23 +1,25 @@
 @prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix hto: <http://project-haystack.org/hto#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
 @base <http://project-haystack.org/hto#> .
 
 <http://project-haystack.org/hto#> rdf:type :Ontology ;
                                    
-                                   <http://purl.org/dc/terms/modified> "2015-10-19"^^xsd:dateTime ;
+                                   terms:modified "2015-10-19"^^xsd:date ;
                                    
                                    rdfs:seeAlso "http://project-haystack.org"^^xsd:anyURI ;
                                    
                                    :versionInfo "0.1.0" ;
                                    
-                                   <http://purl.org/dc/elements/1.1/title> "Haystack Tagging Ontology" ;
+                                   dc:title "Haystack Tagging Ontology" ;
                                    
-                                   <http://purl.org/dc/elements/1.1/creator> "Victor Charpenay <victor.charpenay[at]siemens.com>" ;
+                                   dc:creator "Victor Charpenay <victor.charpenay[at]siemens.com>" ;
                                    
                                    :imports <http://purl.oclc.org/NET/ssnx/ssn> .
 
