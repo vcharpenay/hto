@@ -1,0 +1,1198 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix hto: <http://project-haystack.org/hto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://project-haystack.org/hto#> .
+
+<http://project-haystack.org/hto#> rdf:type :Ontology ;
+                                   
+                                   <http://purl.org/dc/terms/modified> "2015-10-19"^^xsd:dateTime ;
+                                   
+                                   rdfs:seeAlso "http://project-haystack.org"^^xsd:anyURI ;
+                                   
+                                   :versionInfo "0.1.0" ;
+                                   
+                                   <http://purl.org/dc/elements/1.1/title> "Haystack Tagging Ontology" ;
+                                   
+                                   <http://purl.org/dc/elements/1.1/creator> "Victor Charpenay <victor.charpenay[at]siemens.com>" ;
+                                   
+                                   :imports <http://purl.oclc.org/NET/ssnx/ssn> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://project-haystack.org/hto#associatedTo
+
+hto:associatedTo rdf:type :AnnotationProperty ;
+                 
+                 rdfs:comment "gives the OWL class defined in the present ontology that should be associated to the individual defined as subject." ;
+                 
+                 rdfs:domain hto:HTag .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://project-haystack.org/hto#belongsTo
+
+hto:belongsTo rdf:type :ObjectProperty ;
+              
+              rdfs:range hto:Equipment ;
+              
+              rdfs:domain hto:Point ;
+              
+              rdfs:subPropertyOf <http://purl.oclc.org/NET/ssnx/ssn#onPlatform> .
+
+
+
+###  http://project-haystack.org/hto#hasRef
+
+hto:hasRef rdf:type :ObjectProperty ;
+           
+           rdfs:subPropertyOf :topObjectProperty .
+
+
+
+###  http://project-haystack.org/hto#hasSection
+
+hto:hasSection rdf:type :ObjectProperty ;
+               
+               rdfs:domain hto:Equipment ;
+               
+               rdfs:range hto:Section .
+
+
+
+###  http://project-haystack.org/hto#hasTag
+
+hto:hasTag rdf:type :ObjectProperty .
+
+
+
+###  http://project-haystack.org/hto#isRefedBy
+
+hto:isRefedBy rdf:type :ObjectProperty ;
+              
+              :inverseOf hto:hasRef .
+
+
+
+###  http://project-haystack.org/hto#locatedOn
+
+hto:locatedOn rdf:type :ObjectProperty ;
+              
+              rdfs:domain hto:Point ;
+              
+              rdfs:range hto:Section ;
+              
+              rdfs:subPropertyOf <http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf> .
+
+
+
+###  http://project-haystack.org/hto#measuredOn
+
+hto:measuredOn rdf:type :ObjectProperty ;
+               
+               rdfs:domain hto:Measurement ;
+               
+               rdfs:range hto:PhysicalBody .
+
+
+
+###  http://project-haystack.org/hto#quantifies
+
+hto:quantifies rdf:type :ObjectProperty ;
+               
+               rdfs:range hto:Measurement ;
+               
+               rdfs:domain hto:Point ;
+               
+               rdfs:subPropertyOf <http://purl.oclc.org/NET/ssnx/ssn#observes> .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://project-haystack.org/hto#dis
+
+hto:dis rdf:type :DatatypeProperty ;
+        
+        rdfs:domain hto:HEntity .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://project-haystack.org/hto#AHU
+
+hto:AHU rdf:type :Class ;
+        
+        rdfs:subClassOf hto:HVAC .
+
+
+
+###  http://project-haystack.org/hto#Air
+
+hto:Air rdf:type :Class ;
+        
+        rdfs:subClassOf hto:PhysicalBody .
+
+
+
+###  http://project-haystack.org/hto#Boiler
+
+hto:Boiler rdf:type :Class ;
+           
+           rdfs:subClassOf hto:HVAC .
+
+
+
+###  http://project-haystack.org/hto#CO2
+
+hto:CO2 rdf:type :Class ;
+        
+        rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#ChilledSystem
+
+hto:ChilledSystem rdf:type :Class ;
+                  
+                  rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Chiller
+
+hto:Chiller rdf:type :Class ;
+            
+            rdfs:subClassOf hto:HVAC .
+
+
+
+###  http://project-haystack.org/hto#Command
+
+hto:Command rdf:type :Class ;
+            
+            rdfs:subClassOf hto:Point .
+
+
+
+###  http://project-haystack.org/hto#CondenserSystem
+
+hto:CondenserSystem rdf:type :Class ;
+                    
+                    rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#CoolingCoil
+
+hto:CoolingCoil rdf:type :Class ;
+                
+                rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Discharge
+
+hto:Discharge rdf:type :Class ;
+              
+              rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Efficiency
+
+hto:Efficiency rdf:type :Class ;
+               
+               rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#Entering
+
+hto:Entering rdf:type :Class ;
+             
+             rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Equipment
+
+hto:Equipment rdf:type :Class ;
+              
+              rdfs:subClassOf hto:HEntity ,
+                              <http://purl.oclc.org/NET/ssnx/ssn#Platform> .
+
+
+
+###  http://project-haystack.org/hto#Exhaust
+
+hto:Exhaust rdf:type :Class ;
+            
+            rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Fan
+
+hto:Fan rdf:type :Class ;
+        
+        rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Flow
+
+hto:Flow rdf:type :Class ;
+         
+         rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#Frequency
+
+hto:Frequency rdf:type :Class ;
+              
+              rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#Gas
+
+hto:Gas rdf:type :Class ;
+        
+        rdfs:subClassOf hto:PhysicalBody .
+
+
+
+###  http://project-haystack.org/hto#HEntity
+
+hto:HEntity rdf:type :Class .
+
+
+
+###  http://project-haystack.org/hto#HTag
+
+hto:HTag rdf:type :Class .
+
+
+
+###  http://project-haystack.org/hto#HVAC
+
+hto:HVAC rdf:type :Class ;
+         
+         rdfs:subClassOf hto:Equipment .
+
+
+
+###  http://project-haystack.org/hto#HeatingCoil
+
+hto:HeatingCoil rdf:type :Class ;
+                
+                rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Historized
+
+hto:Historized rdf:type :Class ;
+               
+               rdfs:subClassOf hto:PointProperty .
+
+
+
+###  http://project-haystack.org/hto#Humidity
+
+hto:Humidity rdf:type :Class ;
+             
+             rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#IsolationValve
+
+hto:IsolationValve rdf:type :Class ;
+                   
+                   rdfs:subClassOf hto:Valve .
+
+
+
+###  http://project-haystack.org/hto#Leaving
+
+hto:Leaving rdf:type :Class ;
+            
+            rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#LightLevel
+
+hto:LightLevel rdf:type :Class ;
+               
+               rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#LightsGroup
+
+hto:LightsGroup rdf:type :Class ;
+                
+                rdfs:subClassOf hto:Equipment .
+
+
+
+###  http://project-haystack.org/hto#Measurement
+
+hto:Measurement rdf:type :Class .
+
+
+
+###  http://project-haystack.org/hto#Meter
+
+hto:Meter rdf:type :Class ;
+          
+          rdfs:subClassOf hto:Equipment .
+
+
+
+###  http://project-haystack.org/hto#Mixed
+
+hto:Mixed rdf:type :Class ;
+          
+          rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#OnOff
+
+hto:OnOff rdf:type :Class ;
+          
+          rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#Percentage
+
+hto:Percentage rdf:type :Class ;
+               
+               rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#PerimeterHeat
+
+hto:PerimeterHeat rdf:type :Class ;
+                  
+                  rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#PhysicalBody
+
+hto:PhysicalBody rdf:type :Class .
+
+
+
+###  http://project-haystack.org/hto#Point
+
+hto:Point rdf:type :Class ;
+          
+          rdfs:subClassOf hto:HEntity .
+
+
+
+###  http://project-haystack.org/hto#PointProperty
+
+hto:PointProperty rdf:type :Class .
+
+
+
+###  http://project-haystack.org/hto#Power
+
+hto:Power rdf:type :Class ;
+          
+          rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#Pressure
+
+hto:Pressure rdf:type :Class ;
+             
+             rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#Pump
+
+hto:Pump rdf:type :Class ;
+         
+         rdfs:subClassOf hto:VFD .
+
+
+
+###  http://project-haystack.org/hto#RTU
+
+hto:RTU rdf:type :Class ;
+        
+        rdfs:subClassOf hto:AHU .
+
+
+
+###  http://project-haystack.org/hto#RealTime
+
+hto:RealTime rdf:type :Class ;
+             
+             rdfs:subClassOf hto:PointProperty .
+
+
+
+###  http://project-haystack.org/hto#RefrigerantSubstance
+
+hto:RefrigerantSubstance rdf:type :Class ;
+                         
+                         rdfs:subClassOf hto:PhysicalBody .
+
+
+
+###  http://project-haystack.org/hto#Return
+
+hto:Return rdf:type :Class ;
+           
+           rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Section
+
+hto:Section rdf:type :Class ;
+            
+            rdfs:subClassOf <http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest> .
+
+
+
+###  http://project-haystack.org/hto#Sensor
+
+hto:Sensor rdf:type :Class ;
+           
+           rdfs:subClassOf hto:Point ,
+                           <http://purl.oclc.org/NET/ssnx/ssn#SensingDevice> ;
+           
+           hto:associatedTo hto:sensor .
+
+
+
+###  http://project-haystack.org/hto#SetPoint
+
+hto:SetPoint rdf:type :Class ;
+             
+             rdfs:subClassOf hto:Point .
+
+
+
+###  http://project-haystack.org/hto#Site
+
+hto:Site rdf:type :Class ;
+         
+         rdfs:subClassOf hto:HEntity .
+
+
+
+###  http://project-haystack.org/hto#Speed
+
+hto:Speed rdf:type :Class ;
+          
+          rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#Steam
+
+hto:Steam rdf:type :Class ;
+          
+          rdfs:subClassOf hto:PhysicalBody .
+
+
+
+###  http://project-haystack.org/hto#Temperature
+
+hto:Temperature rdf:type :Class ;
+                
+                rdfs:subClassOf hto:Measurement .
+
+
+
+###  http://project-haystack.org/hto#VAV
+
+hto:VAV rdf:type :Class ;
+        
+        rdfs:subClassOf hto:HVAC .
+
+
+
+###  http://project-haystack.org/hto#VFD
+
+hto:VFD rdf:type :Class ;
+        
+        rdfs:subClassOf hto:Equipment .
+
+
+
+###  http://project-haystack.org/hto#VFDFan
+
+hto:VFDFan rdf:type :Class ;
+           
+           rdfs:subClassOf hto:VFD .
+
+
+
+###  http://project-haystack.org/hto#Valve
+
+hto:Valve rdf:type :Class ;
+          
+          rdfs:subClassOf hto:Section .
+
+
+
+###  http://project-haystack.org/hto#Water
+
+hto:Water rdf:type :Class ;
+          
+          rdfs:subClassOf hto:PhysicalBody .
+
+
+
+###  http://project-haystack.org/hto#Writable
+
+hto:Writable rdf:type :Class ;
+             
+             rdfs:subClassOf hto:PointProperty .
+
+
+
+###  http://project-haystack.org/hto#Zone
+
+hto:Zone rdf:type :Class ;
+         
+         rdfs:subClassOf hto:Section .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://project-haystack.org/hto#ahu
+
+hto:ahu rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        hto:associatedTo hto:AHU .
+
+
+
+###  http://project-haystack.org/hto#air
+
+hto:air rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        hto:associatedTo hto:Air .
+
+
+
+###  http://project-haystack.org/hto#boiler
+
+hto:boiler rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           rdfs:comment "note: does not fully implement specification (no boilerPlant). However, is still a TODO in project Haystack." ;
+           
+           hto:associatedTo hto:Boiler .
+
+
+
+###  http://project-haystack.org/hto#bypass
+
+hto:bypass rdf:type hto:HTag ,
+                    :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#chilled
+
+hto:chilled rdf:type hto:HTag ,
+                     :NamedIndividual ;
+            
+            hto:associatedTo hto:ChilledSystem .
+
+
+
+###  http://project-haystack.org/hto#chiller
+
+hto:chiller rdf:type hto:HTag ,
+                     :NamedIndividual ;
+            
+            rdfs:comment "note: does not fully implement specification (no chillerPlant, no CoolingTower)." ;
+            
+            hto:associatedTo hto:Chiller .
+
+
+
+###  http://project-haystack.org/hto#cmd
+
+hto:cmd rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        hto:associatedTo hto:Command .
+
+
+
+###  http://project-haystack.org/hto#co2
+
+hto:co2 rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        hto:associatedTo hto:CO2 .
+
+
+
+###  http://project-haystack.org/hto#condenser
+
+hto:condenser rdf:type hto:HTag ,
+                       :NamedIndividual ;
+              
+              hto:associatedTo hto:CondenserSystem .
+
+
+
+###  http://project-haystack.org/hto#cool
+
+hto:cool rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:CoolingCoil .
+
+
+
+###  http://project-haystack.org/hto#cooling
+
+hto:cooling rdf:type hto:HTag ,
+                     :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#damper
+
+hto:damper rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           rdfs:comment "note: indicates the measurement of how open the damper of a AHU is (0-100%)" ;
+           
+           hto:associatedTo hto:Percentage .
+
+
+
+###  http://project-haystack.org/hto#delta
+
+hto:delta rdf:type hto:HTag ,
+                   :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#discharge
+
+hto:discharge rdf:type hto:HTag ,
+                       :NamedIndividual ;
+              
+              hto:associatedTo hto:Discharge .
+
+
+
+###  http://project-haystack.org/hto#effective
+
+hto:effective rdf:type hto:HTag ,
+                       :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#efficiency
+
+hto:efficiency rdf:type hto:HTag ,
+                        :NamedIndividual ;
+               
+               hto:associatedTo hto:Efficiency .
+
+
+
+###  http://project-haystack.org/hto#elec
+
+hto:elec rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         rdfs:comment "note: according to the documentation, is assocated to either point or equip" .
+
+
+
+###  http://project-haystack.org/hto#enable
+
+hto:enable rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           hto:associatedTo hto:OnOff .
+
+
+
+###  http://project-haystack.org/hto#energy
+
+hto:energy rdf:type hto:HTag ,
+                    :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#entering
+
+hto:entering rdf:type hto:HTag ,
+                      :NamedIndividual ;
+             
+             hto:associatedTo hto:Entering .
+
+
+
+###  http://project-haystack.org/hto#evaporator
+
+hto:evaporator rdf:type hto:HTag ,
+                        :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#exhaust
+
+hto:exhaust rdf:type hto:HTag ,
+                     :NamedIndividual ;
+            
+            hto:associatedTo hto:Exhaust .
+
+
+
+###  http://project-haystack.org/hto#faceBypass
+
+hto:faceBypass rdf:type hto:HTag ,
+                        :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#fan
+
+hto:fan rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        rdfs:comment "note: according to the documentation, is assocated to either point or equip. Should use reasoning to choose the right one for a given HEntity" .
+
+
+
+###  http://project-haystack.org/hto#filter
+
+hto:filter rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           hto:associatedTo hto:Pressure .
+
+
+
+###  http://project-haystack.org/hto#flow
+
+hto:flow rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:Flow .
+
+
+
+###  http://project-haystack.org/hto#freezeStat
+
+hto:freezeStat rdf:type hto:HTag ,
+                        :NamedIndividual ;
+               
+               hto:associatedTo hto:OnOff .
+
+
+
+###  http://project-haystack.org/hto#freq
+
+hto:freq rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:Frequency .
+
+
+
+###  http://project-haystack.org/hto#gas
+
+hto:gas rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        hto:associatedTo hto:Gas .
+
+
+
+###  http://project-haystack.org/hto#heat
+
+hto:heat rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:HeatingCoil .
+
+
+
+###  http://project-haystack.org/hto#heatWheel
+
+hto:heatWheel rdf:type hto:HTag ,
+                       :NamedIndividual ;
+              
+              hto:associatedTo hto:OnOff .
+
+
+
+###  http://project-haystack.org/hto#heating
+
+hto:heating rdf:type hto:HTag ,
+                     :NamedIndividual .
+
+
+
+###  http://project-haystack.org/hto#humidifier
+
+hto:humidifier rdf:type hto:HTag ,
+                        :NamedIndividual ;
+               
+               hto:associatedTo hto:OnOff .
+
+
+
+###  http://project-haystack.org/hto#humidity
+
+hto:humidity rdf:type hto:HTag ,
+                      :NamedIndividual ;
+             
+             hto:associatedTo hto:Humidity .
+
+
+
+###  http://project-haystack.org/hto#hvac
+
+hto:hvac rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:HVAC .
+
+
+
+###  http://project-haystack.org/hto#isolation
+
+hto:isolation rdf:type hto:HTag ,
+                       :NamedIndividual ;
+              
+              hto:associatedTo hto:IsolationValve .
+
+
+
+###  http://project-haystack.org/hto#leaving
+
+hto:leaving rdf:type hto:HTag ,
+                     :NamedIndividual ;
+            
+            hto:associatedTo hto:Leaving .
+
+
+
+###  http://project-haystack.org/hto#lightLevel
+
+hto:lightLevel rdf:type hto:HTag ,
+                        :NamedIndividual ;
+               
+               hto:associatedTo hto:LightLevel .
+
+
+
+###  http://project-haystack.org/hto#lights
+
+hto:lights rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           rdfs:comment "note: according to the documentation, subsumes sensor. But associated here to a Measurement type and redundant with the tag lightLevel." ;
+           
+           hto:associatedTo hto:LightLevel .
+
+
+
+###  http://project-haystack.org/hto#lightsGroup
+
+hto:lightsGroup rdf:type hto:HTag ,
+                         :NamedIndividual ;
+                
+                hto:associatedTo hto:LightsGroup .
+
+
+
+###  http://project-haystack.org/hto#load
+
+hto:load rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:Percentage .
+
+
+
+###  http://project-haystack.org/hto#meter
+
+hto:meter rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Meter .
+
+
+
+###  http://project-haystack.org/hto#mixed
+
+hto:mixed rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Mixed .
+
+
+
+###  http://project-haystack.org/hto#occupancyIndicator
+
+hto:occupancyIndicator rdf:type hto:HTag ,
+                                :NamedIndividual ;
+                       
+                       rdfs:comment "note: according to the documentation, subsumes sensor. But associated here to a Measurement type. Similarly, lights and lightLevel tags both refer to the class LightLevel." ;
+                       
+                       rdfs:seeAlso "http://project-haystack.org/tag/lights" ;
+                       
+                       hto:associatedTo hto:OnOff .
+
+
+
+###  http://project-haystack.org/hto#perimeterHeat
+
+hto:perimeterHeat rdf:type hto:HTag ,
+                           :NamedIndividual ;
+                  
+                  hto:associatedTo hto:PerimeterHeat .
+
+
+
+###  http://project-haystack.org/hto#point
+
+hto:point rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Point .
+
+
+
+###  http://project-haystack.org/hto#power
+
+hto:power rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Power .
+
+
+
+###  http://project-haystack.org/hto#pressure
+
+hto:pressure rdf:type hto:HTag ,
+                      :NamedIndividual ;
+             
+             hto:associatedTo hto:Pressure .
+
+
+
+###  http://project-haystack.org/hto#refrig
+
+hto:refrig rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           hto:associatedTo hto:RefrigerantSubstance .
+
+
+
+###  http://project-haystack.org/hto#return
+
+hto:return rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           hto:associatedTo hto:Return .
+
+
+
+###  http://project-haystack.org/hto#rooftop
+
+hto:rooftop rdf:type hto:HTag ,
+                     :NamedIndividual ;
+            
+            hto:associatedTo hto:RTU .
+
+
+
+###  http://project-haystack.org/hto#run
+
+hto:run rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        rdfs:comment "note: according to the documentation, subsumes sensor. But associated here to a Measurement type." ;
+        
+        hto:associatedTo hto:OnOff .
+
+
+
+###  http://project-haystack.org/hto#sensor
+
+hto:sensor rdf:type hto:HTag ,
+                    :NamedIndividual ;
+           
+           hto:associatedTo hto:Sensor .
+
+
+
+###  http://project-haystack.org/hto#sp
+
+hto:sp rdf:type hto:HTag ,
+                :NamedIndividual ;
+       
+       hto:associatedTo hto:SetPoint .
+
+
+
+###  http://project-haystack.org/hto#speed
+
+hto:speed rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Speed .
+
+
+
+###  http://project-haystack.org/hto#steam
+
+hto:steam rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Steam .
+
+
+
+###  http://project-haystack.org/hto#temp
+
+hto:temp rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:Temperature .
+
+
+
+###  http://project-haystack.org/hto#valve
+
+hto:valve rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Valve .
+
+
+
+###  http://project-haystack.org/hto#vav
+
+hto:vav rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        hto:associatedTo hto:VAV .
+
+
+
+###  http://project-haystack.org/hto#vfd
+
+hto:vfd rdf:type hto:HTag ,
+                 :NamedIndividual ;
+        
+        hto:associatedTo hto:VFD .
+
+
+
+###  http://project-haystack.org/hto#water
+
+hto:water rdf:type hto:HTag ,
+                   :NamedIndividual ;
+          
+          hto:associatedTo hto:Water .
+
+
+
+###  http://project-haystack.org/hto#zone
+
+hto:zone rdf:type hto:HTag ,
+                  :NamedIndividual ;
+         
+         hto:associatedTo hto:Zone .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type :AllDisjointClasses ;
+  :members ( hto:Equipment
+             hto:Point
+             hto:Site
+           )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+
