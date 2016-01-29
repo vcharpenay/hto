@@ -1,6 +1,3 @@
----
-permalink: /hto
----
 <?xml version="1.0"?>
 
 
@@ -11,9 +8,9 @@ permalink: /hto
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY hto "http://project-haystack.org/hto#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY hto2 "http://vcharpenay.github.io/hto/hto#" >
     <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY hto2 "http://vcharpenay.github.io/hto/hto.xml#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
@@ -28,16 +25,16 @@ permalink: /hto
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:hto2="http://vcharpenay.github.io/hto/hto#"
+     xmlns:hto2="http://vcharpenay.github.io/hto/hto.xml#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <Ontology rdf:about="http://vcharpenay.github.io/hto/hto#">
+    <Ontology rdf:about="http://vcharpenay.github.io/hto/hto.xml#">
         <terms:modified rdf:datatype="&xsd;date">2015-10-19</terms:modified>
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://project-haystack.org</rdfs:seeAlso>
-        <dc:title>Haystack Tagging Ontology</dc:title>
+        <rdfs:comment>The Haystack Tagging Ontology is an OWL ontology for Project Haystack, a domain vocabulary for Building Automation Systems.</rdfs:comment>
         <versionInfo>0.1.0</versionInfo>
         <dc:creator>Victor Charpenay &lt;victor.charpenay[at]siemens.com&gt;</dc:creator>
         <ns:license>Academic Free License (&quot;AFL&quot;) 3.0</ns:license>
-        <rdfs:comment>The Haystack Tagging Ontology is an OWL ontology for Project Haystack, a domain vocabulary for Building Automation Systems.</rdfs:comment>
+        <dc:title>Haystack Tagging Ontology</dc:title>
         <imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
     </Ontology>
     
@@ -54,7 +51,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#associatedTo -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#associatedTo -->
 
     <AnnotationProperty rdf:about="&hto2;associatedTo">
         <rdfs:comment>gives the OWL class defined in the present ontology that should be associated to the individual defined as subject.</rdfs:comment>
@@ -74,7 +71,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#belongsTo -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#belongsTo -->
 
     <ObjectProperty rdf:about="&hto2;belongsTo">
         <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
@@ -84,7 +81,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#hasRef -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hasRef -->
 
     <ObjectProperty rdf:about="&hto2;hasRef">
         <inverseOf rdf:resource="&hto2;isRefedBy"/>
@@ -93,7 +90,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#hasSection -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hasSection -->
 
     <ObjectProperty rdf:about="&hto2;hasSection">
         <rdfs:domain rdf:resource="&hto2;Equipment"/>
@@ -102,19 +99,19 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#hasTag -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hasTag -->
 
     <ObjectProperty rdf:about="&hto2;hasTag"/>
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#isRefedBy -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#isRefedBy -->
 
     <ObjectProperty rdf:about="&hto2;isRefedBy"/>
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#locatedOn -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#locatedOn -->
 
     <ObjectProperty rdf:about="&hto2;locatedOn">
         <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf"/>
@@ -124,7 +121,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#measuredOn -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#measuredOn -->
 
     <ObjectProperty rdf:about="&hto2;measuredOn">
         <rdfs:domain rdf:resource="&hto2;Measurement"/>
@@ -133,7 +130,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#quantifies -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#quantifies -->
 
     <ObjectProperty rdf:about="&hto2;quantifies">
         <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
@@ -154,7 +151,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#dis -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#dis -->
 
     <DatatypeProperty rdf:about="&hto2;dis">
         <rdfs:domain rdf:resource="&hto2;HEntity"/>
@@ -173,7 +170,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#AHU -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#AHU -->
 
     <Class rdf:about="&hto2;AHU">
         <rdfs:label>AHU</rdfs:label>
@@ -182,7 +179,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Air -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Air -->
 
     <Class rdf:about="&hto2;Air">
         <rdfs:label>Air</rdfs:label>
@@ -191,7 +188,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Boiler -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Boiler -->
 
     <Class rdf:about="&hto2;Boiler">
         <rdfs:label>Boiler</rdfs:label>
@@ -200,7 +197,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#CO2 -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#CO2 -->
 
     <Class rdf:about="&hto2;CO2">
         <rdfs:label>CO2</rdfs:label>
@@ -209,7 +206,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#ChilledSystem -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#ChilledSystem -->
 
     <Class rdf:about="&hto2;ChilledSystem">
         <rdfs:label>Chilled System</rdfs:label>
@@ -218,7 +215,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Chiller -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Chiller -->
 
     <Class rdf:about="&hto2;Chiller">
         <rdfs:label>Chiller</rdfs:label>
@@ -227,7 +224,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Command -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Command -->
 
     <Class rdf:about="&hto2;Command">
         <rdfs:label>Command</rdfs:label>
@@ -236,7 +233,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#CondenserSystem -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#CondenserSystem -->
 
     <Class rdf:about="&hto2;CondenserSystem">
         <rdfs:label>Condenser System</rdfs:label>
@@ -245,7 +242,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#CoolingCoil -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#CoolingCoil -->
 
     <Class rdf:about="&hto2;CoolingCoil">
         <rdfs:label>Cooling Coil</rdfs:label>
@@ -254,7 +251,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Discharge -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Discharge -->
 
     <Class rdf:about="&hto2;Discharge">
         <rdfs:label>Discharge</rdfs:label>
@@ -263,7 +260,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Efficiency -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Efficiency -->
 
     <Class rdf:about="&hto2;Efficiency">
         <rdfs:label>Efficiency</rdfs:label>
@@ -272,7 +269,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Entering -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Entering -->
 
     <Class rdf:about="&hto2;Entering">
         <rdfs:label>Entering</rdfs:label>
@@ -281,7 +278,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Equipment -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Equipment -->
 
     <Class rdf:about="&hto2;Equipment">
         <rdfs:label>Equipment</rdfs:label>
@@ -291,7 +288,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Exhaust -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Exhaust -->
 
     <Class rdf:about="&hto2;Exhaust">
         <rdfs:label>Exhaust</rdfs:label>
@@ -300,7 +297,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Fan -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Fan -->
 
     <Class rdf:about="&hto2;Fan">
         <rdfs:label>Fan</rdfs:label>
@@ -309,7 +306,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Flow -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Flow -->
 
     <Class rdf:about="&hto2;Flow">
         <rdfs:label>Flow</rdfs:label>
@@ -318,7 +315,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Frequency -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Frequency -->
 
     <Class rdf:about="&hto2;Frequency">
         <rdfs:label>Frequency</rdfs:label>
@@ -327,7 +324,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Gas -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Gas -->
 
     <Class rdf:about="&hto2;Gas">
         <rdfs:label>Gas</rdfs:label>
@@ -336,7 +333,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#HEntity -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HEntity -->
 
     <Class rdf:about="&hto2;HEntity">
         <rdfs:label>HEntity</rdfs:label>
@@ -344,7 +341,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#HTag -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HTag -->
 
     <Class rdf:about="&hto2;HTag">
         <rdfs:label>HTag</rdfs:label>
@@ -352,7 +349,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#HVAC -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HVAC -->
 
     <Class rdf:about="&hto2;HVAC">
         <rdfs:label>HVAC</rdfs:label>
@@ -361,7 +358,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#HeatingCoil -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#HeatingCoil -->
 
     <Class rdf:about="&hto2;HeatingCoil">
         <rdfs:label>Heating Coil</rdfs:label>
@@ -370,7 +367,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Historized -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Historized -->
 
     <Class rdf:about="&hto2;Historized">
         <rdfs:label>Historized</rdfs:label>
@@ -379,7 +376,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Humidity -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Humidity -->
 
     <Class rdf:about="&hto2;Humidity">
         <rdfs:label>Humidity</rdfs:label>
@@ -388,7 +385,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#IsolationValve -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#IsolationValve -->
 
     <Class rdf:about="&hto2;IsolationValve">
         <rdfs:label>Isolation Valve</rdfs:label>
@@ -397,7 +394,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Leaving -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Leaving -->
 
     <Class rdf:about="&hto2;Leaving">
         <rdfs:label>Leaving</rdfs:label>
@@ -406,7 +403,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#LightLevel -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#LightLevel -->
 
     <Class rdf:about="&hto2;LightLevel">
         <rdfs:label>Light Level</rdfs:label>
@@ -415,7 +412,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#LightsGroup -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#LightsGroup -->
 
     <Class rdf:about="&hto2;LightsGroup">
         <rdfs:label>Lights Group</rdfs:label>
@@ -424,7 +421,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Measurement -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Measurement -->
 
     <Class rdf:about="&hto2;Measurement">
         <rdfs:label>Measurement</rdfs:label>
@@ -432,7 +429,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Meter -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Meter -->
 
     <Class rdf:about="&hto2;Meter">
         <rdfs:label>Meter</rdfs:label>
@@ -441,7 +438,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Mixed -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Mixed -->
 
     <Class rdf:about="&hto2;Mixed">
         <rdfs:label>Mixed</rdfs:label>
@@ -450,7 +447,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#OnOff -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#OnOff -->
 
     <Class rdf:about="&hto2;OnOff">
         <rdfs:label>On/Off</rdfs:label>
@@ -459,7 +456,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Percentage -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Percentage -->
 
     <Class rdf:about="&hto2;Percentage">
         <rdfs:label>Percentage</rdfs:label>
@@ -468,7 +465,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#PerimeterHeat -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#PerimeterHeat -->
 
     <Class rdf:about="&hto2;PerimeterHeat">
         <rdfs:label>Perimeter Heat</rdfs:label>
@@ -477,7 +474,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#PhysicalBody -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#PhysicalBody -->
 
     <Class rdf:about="&hto2;PhysicalBody">
         <rdfs:label>Physical Body</rdfs:label>
@@ -485,7 +482,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Point -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Point -->
 
     <Class rdf:about="&hto2;Point">
         <rdfs:label>Point</rdfs:label>
@@ -494,7 +491,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#PointProperty -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#PointProperty -->
 
     <Class rdf:about="&hto2;PointProperty">
         <rdfs:label>Point Property</rdfs:label>
@@ -502,7 +499,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Power -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Power -->
 
     <Class rdf:about="&hto2;Power">
         <rdfs:label>Power</rdfs:label>
@@ -511,7 +508,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Pressure -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Pressure -->
 
     <Class rdf:about="&hto2;Pressure">
         <rdfs:label>Pressure</rdfs:label>
@@ -520,7 +517,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Pump -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Pump -->
 
     <Class rdf:about="&hto2;Pump">
         <rdfs:label>Pump</rdfs:label>
@@ -529,7 +526,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#RTU -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#RTU -->
 
     <Class rdf:about="&hto2;RTU">
         <rdfs:label>RTU</rdfs:label>
@@ -538,7 +535,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#RealTime -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#RealTime -->
 
     <Class rdf:about="&hto2;RealTime">
         <rdfs:label>Real time</rdfs:label>
@@ -547,7 +544,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#RefrigerantSubstance -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#RefrigerantSubstance -->
 
     <Class rdf:about="&hto2;RefrigerantSubstance">
         <rdfs:label>Refrigirant Substance</rdfs:label>
@@ -556,7 +553,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Return -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Return -->
 
     <Class rdf:about="&hto2;Return">
         <rdfs:label>Return</rdfs:label>
@@ -565,7 +562,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Section -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Section -->
 
     <Class rdf:about="&hto2;Section">
         <rdfs:label>Section</rdfs:label>
@@ -574,7 +571,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Sensor -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Sensor -->
 
     <Class rdf:about="&hto2;Sensor">
         <rdfs:label>Sensor</rdfs:label>
@@ -585,7 +582,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#SetPoint -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#SetPoint -->
 
     <Class rdf:about="&hto2;SetPoint">
         <rdfs:label>Set Point</rdfs:label>
@@ -594,7 +591,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Site -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Site -->
 
     <Class rdf:about="&hto2;Site">
         <rdfs:label>Site</rdfs:label>
@@ -603,7 +600,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Speed -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Speed -->
 
     <Class rdf:about="&hto2;Speed">
         <rdfs:label>Speed</rdfs:label>
@@ -612,7 +609,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Steam -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Steam -->
 
     <Class rdf:about="&hto2;Steam">
         <rdfs:label>Steam</rdfs:label>
@@ -621,7 +618,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Temperature -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Temperature -->
 
     <Class rdf:about="&hto2;Temperature">
         <rdfs:label>Temperature</rdfs:label>
@@ -630,7 +627,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#VAV -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#VAV -->
 
     <Class rdf:about="&hto2;VAV">
         <rdfs:label>VAV</rdfs:label>
@@ -639,7 +636,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#VFD -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#VFD -->
 
     <Class rdf:about="&hto2;VFD">
         <rdfs:label>VFD</rdfs:label>
@@ -648,7 +645,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#VFDFan -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#VFDFan -->
 
     <Class rdf:about="&hto2;VFDFan">
         <rdfs:label>VFD Fan</rdfs:label>
@@ -657,7 +654,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Valve -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Valve -->
 
     <Class rdf:about="&hto2;Valve">
         <rdfs:label>Valve</rdfs:label>
@@ -666,7 +663,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Water -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Water -->
 
     <Class rdf:about="&hto2;Water">
         <rdfs:label>Water</rdfs:label>
@@ -675,7 +672,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Writable -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Writable -->
 
     <Class rdf:about="&hto2;Writable">
         <rdfs:label>Writable</rdfs:label>
@@ -684,7 +681,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#Zone -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#Zone -->
 
     <Class rdf:about="&hto2;Zone">
         <rdfs:label>Zone</rdfs:label>
@@ -704,7 +701,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#ahu -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#ahu -->
 
     <NamedIndividual rdf:about="&hto2;ahu">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -714,7 +711,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#air -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#air -->
 
     <NamedIndividual rdf:about="&hto2;air">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -724,7 +721,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#boiler -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#boiler -->
 
     <NamedIndividual rdf:about="&hto2;boiler">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -735,7 +732,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#bypass -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#bypass -->
 
     <NamedIndividual rdf:about="&hto2;bypass">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -744,7 +741,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#chilled -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#chilled -->
 
     <NamedIndividual rdf:about="&hto2;chilled">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -754,7 +751,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#chiller -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#chiller -->
 
     <NamedIndividual rdf:about="&hto2;chiller">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -765,7 +762,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#cmd -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#cmd -->
 
     <NamedIndividual rdf:about="&hto2;cmd">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -775,7 +772,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#co2 -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#co2 -->
 
     <NamedIndividual rdf:about="&hto2;co2">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -785,7 +782,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#condenser -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#condenser -->
 
     <NamedIndividual rdf:about="&hto2;condenser">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -795,7 +792,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#cool -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#cool -->
 
     <NamedIndividual rdf:about="&hto2;cool">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -805,7 +802,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#cooling -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#cooling -->
 
     <NamedIndividual rdf:about="&hto2;cooling">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -814,7 +811,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#damper -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#damper -->
 
     <NamedIndividual rdf:about="&hto2;damper">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -825,7 +822,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#delta -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#delta -->
 
     <NamedIndividual rdf:about="&hto2;delta">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -834,7 +831,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#discharge -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#discharge -->
 
     <NamedIndividual rdf:about="&hto2;discharge">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -844,7 +841,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#effective -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#effective -->
 
     <NamedIndividual rdf:about="&hto2;effective">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -853,7 +850,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#efficiency -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#efficiency -->
 
     <NamedIndividual rdf:about="&hto2;efficiency">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -863,7 +860,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#elec -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#elec -->
 
     <NamedIndividual rdf:about="&hto2;elec">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -873,7 +870,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#enable -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#enable -->
 
     <NamedIndividual rdf:about="&hto2;enable">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -883,7 +880,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#energy -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#energy -->
 
     <NamedIndividual rdf:about="&hto2;energy">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -892,7 +889,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#entering -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#entering -->
 
     <NamedIndividual rdf:about="&hto2;entering">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -902,7 +899,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#evaporator -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#evaporator -->
 
     <NamedIndividual rdf:about="&hto2;evaporator">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -911,7 +908,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#exhaust -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#exhaust -->
 
     <NamedIndividual rdf:about="&hto2;exhaust">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -921,7 +918,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#faceBypass -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#faceBypass -->
 
     <NamedIndividual rdf:about="&hto2;faceBypass">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -930,7 +927,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#fan -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#fan -->
 
     <NamedIndividual rdf:about="&hto2;fan">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -940,7 +937,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#filter -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#filter -->
 
     <NamedIndividual rdf:about="&hto2;filter">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -950,7 +947,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#flow -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#flow -->
 
     <NamedIndividual rdf:about="&hto2;flow">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -960,7 +957,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#freezeStat -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#freezeStat -->
 
     <NamedIndividual rdf:about="&hto2;freezeStat">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -970,7 +967,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#freq -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#freq -->
 
     <NamedIndividual rdf:about="&hto2;freq">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -980,7 +977,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#gas -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#gas -->
 
     <NamedIndividual rdf:about="&hto2;gas">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -990,7 +987,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#heat -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#heat -->
 
     <NamedIndividual rdf:about="&hto2;heat">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1000,7 +997,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#heatWheel -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#heatWheel -->
 
     <NamedIndividual rdf:about="&hto2;heatWheel">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1010,7 +1007,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#heating -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#heating -->
 
     <NamedIndividual rdf:about="&hto2;heating">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1019,7 +1016,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#humidifier -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#humidifier -->
 
     <NamedIndividual rdf:about="&hto2;humidifier">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1029,7 +1026,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#humidity -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#humidity -->
 
     <NamedIndividual rdf:about="&hto2;humidity">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1039,7 +1036,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#hvac -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#hvac -->
 
     <NamedIndividual rdf:about="&hto2;hvac">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1049,7 +1046,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#isolation -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#isolation -->
 
     <NamedIndividual rdf:about="&hto2;isolation">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1059,7 +1056,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#leaving -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#leaving -->
 
     <NamedIndividual rdf:about="&hto2;leaving">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1069,7 +1066,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#lightLevel -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#lightLevel -->
 
     <NamedIndividual rdf:about="&hto2;lightLevel">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1079,7 +1076,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#lights -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#lights -->
 
     <NamedIndividual rdf:about="&hto2;lights">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1090,7 +1087,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#lightsGroup -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#lightsGroup -->
 
     <NamedIndividual rdf:about="&hto2;lightsGroup">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1100,7 +1097,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#load -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#load -->
 
     <NamedIndividual rdf:about="&hto2;load">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1110,7 +1107,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#meter -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#meter -->
 
     <NamedIndividual rdf:about="&hto2;meter">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1120,7 +1117,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#mixed -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#mixed -->
 
     <NamedIndividual rdf:about="&hto2;mixed">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1130,19 +1127,19 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#occupancyIndicator -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#occupancyIndicator -->
 
     <NamedIndividual rdf:about="&hto2;occupancyIndicator">
         <rdf:type rdf:resource="&hto2;HTag"/>
         <rdfs:comment rdf:datatype="&xsd;string">  Occupancy sensor under `lightsGroup`.  Point must be Bool where true indicates occupied and false indicates unoccupied</rdfs:comment>
-        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type. Similarly, lights and lightLevel tags both refer to the class LightLevel.</rdfs:comment>
         <rdfs:seeAlso>http://project-haystack.org/tag/lights</rdfs:seeAlso>
+        <rdfs:comment>note: according to the documentation, subsumes sensor. But associated here to a Measurement type. Similarly, lights and lightLevel tags both refer to the class LightLevel.</rdfs:comment>
         <hto2:associatedTo rdf:resource="&hto2;OnOff"/>
     </NamedIndividual>
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#perimeterHeat -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#perimeterHeat -->
 
     <NamedIndividual rdf:about="&hto2;perimeterHeat">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1152,7 +1149,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#point -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#point -->
 
     <NamedIndividual rdf:about="&hto2;point">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1162,7 +1159,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#power -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#power -->
 
     <NamedIndividual rdf:about="&hto2;power">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1172,7 +1169,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#pressure -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#pressure -->
 
     <NamedIndividual rdf:about="&hto2;pressure">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1182,7 +1179,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#refrig -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#refrig -->
 
     <NamedIndividual rdf:about="&hto2;refrig">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1192,7 +1189,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#return -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#return -->
 
     <NamedIndividual rdf:about="&hto2;return">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1202,7 +1199,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#rooftop -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#rooftop -->
 
     <NamedIndividual rdf:about="&hto2;rooftop">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1212,7 +1209,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#run -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#run -->
 
     <NamedIndividual rdf:about="&hto2;run">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1223,7 +1220,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#sensor -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#sensor -->
 
     <NamedIndividual rdf:about="&hto2;sensor">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1233,7 +1230,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#sp -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#sp -->
 
     <NamedIndividual rdf:about="&hto2;sp">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1243,7 +1240,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#speed -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#speed -->
 
     <NamedIndividual rdf:about="&hto2;speed">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1253,7 +1250,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#steam -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#steam -->
 
     <NamedIndividual rdf:about="&hto2;steam">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1263,7 +1260,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#temp -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#temp -->
 
     <NamedIndividual rdf:about="&hto2;temp">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1273,7 +1270,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#valve -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#valve -->
 
     <NamedIndividual rdf:about="&hto2;valve">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1283,7 +1280,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#vav -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#vav -->
 
     <NamedIndividual rdf:about="&hto2;vav">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1293,7 +1290,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#vfd -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#vfd -->
 
     <NamedIndividual rdf:about="&hto2;vfd">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1303,7 +1300,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#water -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#water -->
 
     <NamedIndividual rdf:about="&hto2;water">
         <rdf:type rdf:resource="&hto2;HTag"/>
@@ -1313,7 +1310,7 @@ permalink: /hto
     
 
 
-    <!-- http://vcharpenay.github.io/hto/hto#zone -->
+    <!-- http://vcharpenay.github.io/hto/hto.xml#zone -->
 
     <NamedIndividual rdf:about="&hto2;zone">
         <rdf:type rdf:resource="&hto2;HTag"/>
