@@ -8,7 +8,6 @@
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY hto "http://project-haystack.org/hto#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY hto2 "http://vcharpenay.github.io/hto/hto.xml#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -22,19 +21,18 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://creativecommons.org/ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:hto2="http://vcharpenay.github.io/hto/hto.xml#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <Ontology rdf:about="http://vcharpenay.github.io/hto/hto.xml">
-        <terms:modified rdf:datatype="&xsd;date">2015-10-19</terms:modified>
+        <terms:modified rdf:datatype="&xsd;date">2016-02-01</terms:modified>
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://project-haystack.org</rdfs:seeAlso>
         <ns:license>Academic Free License (&quot;AFL&quot;) 3.0</ns:license>
         <dc:title>Haystack Tagging Ontology</dc:title>
         <dc:creator>Victor Charpenay &lt;victor.charpenay[at]siemens.com&gt;</dc:creator>
         <rdfs:comment>The Haystack Tagging Ontology is an OWL ontology for Project Haystack, a domain vocabulary for Building Automation Systems.</rdfs:comment>
-        <versionInfo>0.1.0</versionInfo>
+        <versionInfo>0.2.0</versionInfo>
         <imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
     </Ontology>
     
