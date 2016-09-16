@@ -8,7 +8,7 @@ The Haystack Tagging Ontology (HTO) is an OWL ontology for
 [Project Haystack](http://project-haystack.org/), a domain vocabulary for
 Building Automation Systems. It is available at:
 
-http://vcharpenay.github.io/hto/hto.xml
+[http://vcharpenay.github.io/hto/hto.xml](http://vcharpenay.github.io/hto/hto.xml)
 
 See the [generated documentation](doc.htm) for the ontology.
 
