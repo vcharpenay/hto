@@ -63,7 +63,7 @@ is equivalent to the following RDF document (Turtle syntax)
              hto:hasRef :CHU-1.
 ~~~
 
-All tags from the vocabulary have been map to a concept to the domain model
+All tags from the vocabulary have been mapped to a concept in the domain model
 so that a transformation is possible between raw Haystack tags and ontological
 data.
 
